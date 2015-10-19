@@ -1,0 +1,44 @@
+List of library modifications:
+
+TinyGPS++.h and TinyGPS++.cpp were renamed to TinyGPSpp.h and .cpp 
+Adafruit_PCD8455.h and .cpp were renamed to Adafruit_PCD8455G.h and .cpp
+Adafruit_GFX.h and .cpp was renamed to Adafruit_GFXG.h and .cpp
+to distinguish between the vanilla version and the modified version for the Galileo Gen 2.
+
+TinyGPSpp.cpp - CHANGES
+lines 34,35 added:
+#define radians(deg) ((deg)*DEG_TO_RAD)
+#define degrees(rad) ((rad)*RAD_TO_DEG)
+
+HTU21D.h
+added include guards
+#ifndef HTU21D_H
+#define HTU21D_H
+...<code>...
+#endif
+
+HTU21D.cpp
+line 26: commented out Wire.h inclusion
+
+Adafruit_BMP085.h
+added include guards
+#ifndef ADAFRUIT_BMP085_H
+#define ADAFRUIT_BMP085_H
+...<code>...
+#endif
+
+Adafruit_BMP085.cpp
+line 29: commented out call to Wire.begin()
+
+Adafruit_PCD8455G.cpp
+lines 187-192: commented out for compatibility
+
+Adafruit_SI1145.h
+added include guards
+#ifndef ADAFRUIT_SI1145_H
+#define ADAFRUIT_SI1145_H
+...<code>...
+#endif
+
+Adafruit_SI1145.h
+line 26: commented out call to Wire.begin();

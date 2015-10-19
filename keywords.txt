@@ -1,0 +1,9 @@
+WeatherStation	KEYWORD1
+begin	KEYWORD2
+controlBacklight	KEYWORD2
+getGPSdata	KEYWORD2
+getPressureSensorData	KEYWORD2
+getHumiditySensorData	KEYWORD2
+calcTemperature	KEYWORD2
+displayInfoSerial	KEYWORD2
+getUVandLightData	KEYWORD2
